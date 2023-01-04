@@ -1,0 +1,20 @@
+We choose 10 kinds of initial seed under super-parameter <Max Iterations of K-Means = 3>, 
+The average accuracy : 0.8780, standard deviation : 0.0714, max accuracy: 0.9200.
+We choose 10 kinds of initial seed under super-parameter <Max Iterations of K-Means = 6>, 
+The average accuracy : 0.8953, standard deviation : 0.0090, max accuracy: 0.9200.
+We choose 10 kinds of initial seed under super-parameter <Max Iterations of K-Means = 9>, 
+The average accuracy : 0.8900, standard deviation : 0.0033, max accuracy: 0.8933.
+We choose 10 kinds of initial seed under super-parameter <Max Iterations of K-Means = 12>, 
+The average accuracy : 0.8893, standard deviation : 0.0033, max accuracy: 0.8933.
+We choose 10 kinds of initial seed under super-parameter <Max Iterations of K-Means = 15>, 
+The average accuracy : 0.8893, standard deviation : 0.0033, max accuracy: 0.8933.
+We choose 10 kinds of initial seed under super-parameter <Max Iterations of K-Means = 18>, 
+The average accuracy : 0.8893, standard deviation : 0.0033, max accuracy: 0.8933.
+We choose 10 kinds of initial seed under super-parameter <Max Iterations of K-Means = 21>, 
+The average accuracy : 0.8900, standard deviation : 0.0033, max accuracy: 0.8933.
+We choose 10 kinds of initial seed under super-parameter <Max Iterations of K-Means = 24>, 
+The average accuracy : 0.8893, standard deviation : 0.0033, max accuracy: 0.8933.
+We choose 10 kinds of initial seed under super-parameter <Max Iterations of K-Means = 27>, 
+The average accuracy : 0.8887, standard deviation : 0.0031, max accuracy: 0.8933.
+We choose 10 kinds of initial seed under super-parameter <Max Iterations of K-Means = 30>, 
+The average accuracy : 0.8893, standard deviation : 0.0033, max accuracy: 0.8933.
