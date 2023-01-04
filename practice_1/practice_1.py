@@ -103,5 +103,5 @@ if __name__ == '__main__':
     out_file = "../results/practice_1_kmeans_detail.txt"
     summary_file = "../results/practice_1_kmeans_summary.txt"
     out_file_2 = "../results/practice_1_spectral_cluster_detail.txt"
-    # run_main(data_file, out_file, summary_file)
+    run_main(data_file, out_file, summary_file)
     run_spcluster_test(data_file, out_file_2)
