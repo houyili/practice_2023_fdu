@@ -1,6 +1,6 @@
 import  pandas  as pd
 import numpy as np
-from sklearn.cluster import KMeans
+from sklearn.cluster import KMeans, SpectralClustering
 from sklearn.cluster._kmeans import kmeans_plusplus
 from sklearn.metrics import accuracy_score
 
@@ -21,6 +21,10 @@ def run_kmeans(features, cluster_num=3, max_iter=100, seed=0):
     Centroids = k_means.cluster_centers_  # 查看质心
     Inertia = k_means.inertia_  # 每个簇内到其质心的距离和，越小越相似
     return label.astype('int'), centers, Centroids
+
+def run_spcluster(fea, cluster_num=3, gamma=1, seed=None):
+    y_pred = SpectralClustering(n_clusters=cluster_num, gamma=gamma, random_state=seed).fit_predict(fea)
+    return y_pred
 
 def max_acc_trans_res(res, label):
     res_d = dict()
@@ -81,11 +85,23 @@ def run_main(data_file, output, summary):
                        "max accuracy: %0.4f.\n" %(time, i, avg, std, max))
     handel_s.close()
 
+def run_spcluster_test(data_file, out_file):
+    fea, label = open_data(data_file)
+    handel = open(out_file, 'w')
+    times = 0
+    for g in range(10):
+        for i in range(3):
+            pred = run_spcluster(fea, seed=times, gamma=g)
+            max_acc_trans_res(pred, label)
+            acc = accuracy_score(label, pred)
+            handel.write("Run Spectral Clustering time %d the gamma is %d, the accuracy score is: %0.4f\n" %(times, g, acc))
+            times = times + 1
+    handel.close()
 
 if __name__ == '__main__':
     data_file = "../data/iris.dat"
     out_file = "../results/practice_1_kmeans_detail.txt"
     summary_file = "../results/practice_1_kmeans_summary.txt"
-    run_main(data_file, out_file, summary_file)
-
-
+    out_file_2 = "../results/practice_1_spectral_cluster_detail.txt"
+    # run_main(data_file, out_file, summary_file)
+    run_spcluster_test(data_file, out_file_2)
