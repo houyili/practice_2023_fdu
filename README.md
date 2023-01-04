@@ -1,1 +1,1 @@
-# pratice_2023_fdu
+# practice_2023_fdu
