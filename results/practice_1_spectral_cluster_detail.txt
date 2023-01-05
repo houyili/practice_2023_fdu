@@ -1,6 +1,6 @@
-Run Spectral Clustering time 0 the gamma is 0, the accuracy score is: 0.3867
-Run Spectral Clustering time 1 the gamma is 0, the accuracy score is: 0.3533
-Run Spectral Clustering time 2 the gamma is 0, the accuracy score is: 0.3600
+Run Spectral Clustering time 0 the gamma is 0, the accuracy score is: 0.3533
+Run Spectral Clustering time 1 the gamma is 0, the accuracy score is: 0.3667
+Run Spectral Clustering time 2 the gamma is 0, the accuracy score is: 0.3800
 Run Spectral Clustering time 3 the gamma is 1, the accuracy score is: 0.9000
 Run Spectral Clustering time 4 the gamma is 1, the accuracy score is: 0.9000
 Run Spectral Clustering time 5 the gamma is 1, the accuracy score is: 0.9000

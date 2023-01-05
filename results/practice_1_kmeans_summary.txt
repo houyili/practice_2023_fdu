@@ -1,5 +1,5 @@
 We choose 10 kinds of initial seed under super-parameter <Max Iterations of K-Means = 3>, 
-The average accuracy : 0.8780, standard deviation : 0.0714, max accuracy: 0.9200.
+The average accuracy : 0.8773, standard deviation : 0.0710, max accuracy: 0.9200.
 We choose 10 kinds of initial seed under super-parameter <Max Iterations of K-Means = 6>, 
 The average accuracy : 0.8953, standard deviation : 0.0090, max accuracy: 0.9200.
 We choose 10 kinds of initial seed under super-parameter <Max Iterations of K-Means = 9>, 
