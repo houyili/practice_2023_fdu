@@ -22,11 +22,12 @@ def plot_lle(fea, label, n_neighbors, n_components, output_path):
                                         eigen_solver='auto', method='standard').fit_transform(fea)
     t1 = time()
     print("%s: %.2g sec" % ('standard', t1 - t0))
-    plt.figure()
-    plt.scatter(Y[:100, 0], Y[:100, 1], c=label[:100], cmap=plt.cm.Spectral)
-    plt.title("%s %d (%.2g sec)" % ('LLE', n_neighbors , t1 - t0))
-    plt.axis('tight')
-    plt.savefig(output_path + 'practice_3_lle_plot.png', dpi=500, bbox_inches='tight')
+    for i in range(1, 4):
+        plt.figure()
+        plt.scatter(Y[:100*i, 0], Y[:100*i, 1], c=label[:100*i], cmap=plt.cm.Spectral)
+        plt.title("%s %d (%.2g sec)" % ('LLE', n_neighbors , t1 - t0))
+        plt.axis('tight')
+        plt.savefig(output_path + 'practice_3_lle_plot_%d.png' %i, dpi=500, bbox_inches='tight')
 
 def lle_svm_cls_error(all, train_x, train_y, test_x, test_y, output_path):
     if os.path.exists(output_path + 'practice_3_lle_svm.png'):
@@ -68,6 +69,7 @@ def lle_svm_cls_error(all, train_x, train_y, test_x, test_y, output_path):
     plt.xlabel("Component Nums.")
     plt.ylabel("Accuracy")
     plt.legend()
+    plt.legend(loc=4)
     plt.grid(True)
     plt.savefig(output_path + 'practice_3_lle_svm.png', dpi=500, bbox_inches='tight')
 
@@ -89,7 +91,7 @@ def lle_lda_cls_error(all, train_x, train_y, test_x, test_y, output_path):
         acc = metrics.accuracy_score(test_y, pred)
         print("PCA component num %d, acc is: %0.4f" % (i, acc))
         res.append(acc)
-        if acc > 0.88 and not handel.closed:
+        if acc > 0.90 and not handel.closed:
             handel.write("# PCA component num %d, acc is: %0.4f \n The prediction detail are follows:" % (i, acc))
             handel.write("groud_truth_label, prediction\n")
             print("write")
@@ -105,6 +107,7 @@ def lle_lda_cls_error(all, train_x, train_y, test_x, test_y, output_path):
     plt.xlabel("Component Nums.")
     plt.ylabel("Accuracy")
     plt.legend()
+    plt.legend(loc=4)
     plt.grid(True)
     plt.savefig(output_path + 'practice_3_lle_lda.png', dpi=500, bbox_inches='tight')
 

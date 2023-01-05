@@ -44,5 +44,22 @@
 ### Eigenface+SVM
 结果如图，详细结果放在"./results/practice_2_pca_svm_detail_results.txt"。
 
-和LDA一样，并不是COMPONENTS数目越多越好，但COMPONENTS=N_C时，分类效果最好。此时ACC=0.93
-![fig3](./results/practice_2_pca_svm.png)
+和LDA一样，并不是COMPONENTS数目越多越好，但COMPONENTS=N_C时，分类效果最好。此时ACC=0.89
+![fig4](./results/practice_2_pca_svm.png)
+
+## 习题三
+### LLE可视化
+将前十个分类画图如下：
+![fig5](./results/practice_3_lle_plot_3.png)
+
+### LLE+各种分类器
+详细结果放在：
++ LDA: "./results/practice_3_lle_lda_detail_results.txt"、
++ SVM: "./results/practice_3_lle_svm_detail_results.txt"、
++ 逻辑回归: "./results/practice_3_lle_lr_detail_results.txt"。
+SVM的结果如下图，COMPONENTS=45, 结果最好ACC=0.895
+![fig6](./results/practice_3_lle_svm.png)
+LDA的结果如下图，COMPONENTS=75, 结果最好ACC=0.92
+![fig7](./results/practice_3_lle_LDA.png)
+逻辑回归的结果如下图，COMPONENTS=70, 结果最好ACC=0.89
+![fig8](./results/practice_3_lle_LR.png)
