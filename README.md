@@ -29,7 +29,20 @@
 ## 习题二
 ### 最近邻分类
 结果如图，详细结果放在"./results/practice_2_nearest_neighbors_classifier_detail_results.txt"
-![最近邻分类器的精度](./results/practice_2_nearest_neighbors_classifier.png)
+![fig1](./results/practice_2_nearest_neighbors_classifier.png)
 
 ### PCA降维损失
-结果如图，
+结果如图，随着COMPONENTS数目的增多，复原图片之后的损失变得越来越小。
+![fig2](./results/practice_2_pca_recovery_error.png)
+
+### Eigenface+Fisherface(ACC最高)
+结果如图，详细结果放在"./results/practice_2_pca_lda_detail_results.txt"。
+
+我们可以看到并不是COMPONENTS数目越多越好，但COMPONENTS=N_C时，分类效果最好。此时ACC=0.93
+![fig3](./results/practice_2_pca_lda.png)
+
+### Eigenface+SVM
+结果如图，详细结果放在"./results/practice_2_pca_svm_detail_results.txt"。
+
+和LDA一样，并不是COMPONENTS数目越多越好，但COMPONENTS=N_C时，分类效果最好。此时ACC=0.93
+![fig3](./results/practice_2_pca_svm.png)
