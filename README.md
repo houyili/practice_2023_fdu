@@ -38,7 +38,9 @@
 ### Eigenface+Fisherface(ACC最高)
 结果如图，详细结果放在"./results/practice_2_pca_lda_detail_results.txt"。
 
-我们可以看到并不是COMPONENTS数目越多越好，但COMPONENTS=N_C时，分类效果最好。此时ACC=0.93
+我们可以看到并不是COMPONENTS数目越多越好。
+
+但COMPONENTS=N_C时，分类效果最好。**此时ACC=0.93。**
 ![fig3](./results/practice_2_pca_lda.png)
 
 ### Eigenface+SVM
@@ -57,6 +59,7 @@
 + LDA: "./results/practice_3_lle_lda_detail_results.txt"、
 + SVM: "./results/practice_3_lle_svm_detail_results.txt"、
 + 逻辑回归: "./results/practice_3_lle_lr_detail_results.txt"。
+
 SVM的结果如下图，COMPONENTS=45, 结果最好ACC=0.895
 ![fig6](./results/practice_3_lle_svm.png)
 LDA的结果如下图，COMPONENTS=75, 结果最好ACC=0.92
