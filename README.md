@@ -60,6 +60,6 @@
 SVM的结果如下图，COMPONENTS=45, 结果最好ACC=0.895
 ![fig6](./results/practice_3_lle_svm.png)
 LDA的结果如下图，COMPONENTS=75, 结果最好ACC=0.92
-![fig7](./results/practice_3_lle_LDA.png)
+![fig7](./results/practice_3_lle_lda.png)
 逻辑回归的结果如下图，COMPONENTS=70, 结果最好ACC=0.89
-![fig8](./results/practice_3_lle_LR.png)
+![fig8](./results/practice_3_lle_lr.png)
