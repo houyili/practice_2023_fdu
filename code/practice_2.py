@@ -130,7 +130,7 @@ def knn_cls_error(train_x, train_y, test_x, test_y, output_path):
     plt.grid(True)
     plt.savefig(output_path + 'practice_2_nearest_neighbors_classifier.png', dpi=500, bbox_inches='tight')
 
-def lda_cls_error(train_x, train_y, test_x, test_y, output_path):
+def lda_cls_error(all, train_x, train_y, test_x, test_y, output_path):
     if os.path.exists(output_path + 'practice_2_pca_lda.png'):
         return
     components = [i for i in range(10, 35, 5)] + [i for i in range(35, 45)] + [i for i in range(45, 100, 10)]
@@ -139,7 +139,7 @@ def lda_cls_error(train_x, train_y, test_x, test_y, output_path):
     handel.write("# The prediction detail Eigenface == N_C \n")
     handel.write("groud_truth_label, prediction\n")
     for i in components:
-        _, model = pca_face(i, fea)
+        _, model = pca_face(i, all)
         x_pca = model.transform(train_x)
         t_pca = model.transform(test_x)
         clf = LinearDiscriminantAnalysis()
@@ -165,7 +165,7 @@ def lda_cls_error(train_x, train_y, test_x, test_y, output_path):
     plt.grid(True)
     plt.savefig(output_path + 'practice_2_pca_lda.png', dpi=500, bbox_inches='tight')
 
-def svm_cls_error(train_x, train_y, test_x, test_y, output_path):
+def svm_cls_error(all, train_x, train_y, test_x, test_y, output_path):
     if os.path.exists(output_path + 'practice_2_pca_svm.png'):
         return
     components = [i for i in range(10, 301, 5)]
@@ -173,7 +173,7 @@ def svm_cls_error(train_x, train_y, test_x, test_y, output_path):
     handel = open(output_path + 'practice_2_pca_svm_detail_results.txt', 'w')
 
     for i in components:
-        _, model = pca_face(i, fea)
+        _, model = pca_face(i, all)
         x_pca = model.transform(train_x)
         t_pca = model.transform(test_x)
         param_grid = {
@@ -216,5 +216,5 @@ if __name__ == '__main__':
     train_x, train_y, test_x, test_y = split_train_test_orl(fea, label)
     test_pac_recover_error(fea, out_res_path)
     knn_cls_error(train_x, train_y, test_x, test_y, out_res_path)
-    lda_cls_error(train_x, train_y, test_x, test_y, out_res_path)
-    svm_cls_error(train_x, train_y, test_x, test_y, out_res_path)
+    lda_cls_error(fea, train_x, train_y, test_x, test_y, out_res_path)
+    svm_cls_error(fea, train_x, train_y, test_x, test_y, out_res_path)
