@@ -29,6 +29,7 @@
 ## 习题二
 ### 最近邻分类
 结果如图，详细结果放在"./results/practice_2_nearest_neighbors_classifier_detail_results.txt"
-![pic1](./results/practice_2_nearest_neighbors_classifier.png)
+![最近邻分类器的精度](./results/practice_2_nearest_neighbors_classifier.png)
 
-### 
+### PCA降维损失
+结果如图，
